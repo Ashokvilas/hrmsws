@@ -32,14 +32,14 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public String deleteUserById(Integer id) {
-		// TODO Auto-generated method stub
+		
 		userRepository.deleteById(id);
 		return "success";
 	}
 
 	@Override
 	public Users getUserById(Integer userid) {
-		// TODO Auto-generated method stub
+	
 		Optional<Users> findById = userRepository.findById(userid);
 		if (findById.isPresent()) {
 			return findById.get();
