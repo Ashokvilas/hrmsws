@@ -219,7 +219,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private String getStatusNameById(int statusId) {
         Optional<Status> statusOptional = statusRepository.findById(statusId);
         if(statusOptional.isPresent()) {
-            return statusOptional.get().getStatusName();
+            return statusOptional.get().getStatusname();
         } else {
             throw new RuntimeException("Invalid status ID");
         }

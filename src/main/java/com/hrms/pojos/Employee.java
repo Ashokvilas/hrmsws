@@ -5,17 +5,16 @@ import java.util.Date;
 import javax.persistence.*;
 import lombok.*;
 
-@Entity
-@Table(name = "employees")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name="employees")
 public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idemployees") // Map the id field to the idemployees column
+    @Column(name = "idemployees") 
     private int id;
 
     private String employeeName;
