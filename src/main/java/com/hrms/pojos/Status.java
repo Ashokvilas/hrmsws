@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.*;
 
+@Data
 @Entity
 public class Status {
     
@@ -16,21 +18,6 @@ public class Status {
     
     private String statusname;
 
-	public int getIdstatus() {
-		return idstatus;
-	}
-
-	public void setIdstatus(int idstatus) {
-		this.idstatus = idstatus;
-	}
-
-	public String getStatusName() {
-		return statusname;
-	}
-
-	public void setStatusName(String statusname) {
-		this.statusname = statusname;
-	}
-
+	
     
 }
